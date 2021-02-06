@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+</html>
+
+	<head>
+	
+		<title>SACHI's Cooking | Recipes</title>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<style>
+		
+			body{
+background-color:black;
+}
+			.header{
+background-color:#ab073e;			
+}
+			#img1{
+display:inline-block;
+margin-top: 5px;
+margin-left: 5px;
+width: 5vw;			
+}
+			#headleft{
+display:inline-block;			
+}
+			#headright{
+float:right;		
+position:relative;		
+}
+			#login{
+display:block;	
+float:right;
+margin-right: 5px;
+margin-top: 5px;
+}
+			.header h1{
+margin-bottom: 0px;	
+font-size: 4vw;	
+}
+			.header p{
+margin-bottom: 0px;
+margin-top: 0px;	
+font-size: 2vw;			
+}
+			#searchbar{
+padding-top: 3px;	
+width: 20vw;
+border-radius: 10px;
+}
+			#searchbut{
+border-width: 2px;
+margin-right: 5px;
+padding-bottom: 1px;
+border-radius: 10px;		
+}
+			.nav{
+background-color:#248c6f;	
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;	
+}		
+			.nav a{
+margin-left: 1px;
+margin-right: 1px;	
+border:4px solid #248c6f;
+border-radius:5px;
+color:black;
+text-decoration:none;
+font-size: 12px
+}
+			.nav a#current{
+background-color:#18c1ee;	
+border:4px solid #18c1ee; 		
+}
+			.nav a:hover{
+background-color:lightgrey;		
+border:4px solid lightgrey; 			
+}
+			.foodtopics{
+position:relative;			
+width: 20vw;
+height: auto;
+margin: 5px;
+display:inline-block;	
+background-color:black;
+}
+			.foodtopics:hover{
+transform: scale(1.1);	
+border:2px solid white;		
+}
+			.imgslider, .imgslider2, .imgslider3, .imgslider4, .imgslider5, .imgslider6, .imgslider7, .imgslider8, .imgslider9, .imgsliders1 {
+display:none;
+width: 100%;
+height: auto;                                         
+}
+			.foodtopics p{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);			
+font-size:4vw;
+color:white;
+text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;	
+}
+
+		</style>
+		
+	</head>
+	
+	<body>
+	
+		<div class="header">
+
+			<a href="Home.html"><img src="logo.png" id="img1"></a>
+			
+			<span id="headleft">
+				<h1>SACHI's Cooking</h1>
+				<p>Explore our exquisite recepies that would blow away your taste buds!</p>
+			</span>
+				<button type="text" id="login">Guest</button></a>	
+		</div>	
+	
+		<div class="nav">
+			<a href="Home.html">Home</a>
+			<a  id="current">Recipes</a>	
+			<a href="contact.html">Request</a>
+			<span id="headright">
+				<input type="text" id="searchbar" placeholder="Search">
+				<button id="searchbut" onclick="search()">&#128269;</button>
+			</span>
+			
+		</div>
+		<br>
+		<div>
+			<a href="Appetizers.html"><div id="appetizers" class="foodtopics">
+				<p><b>Appetizers</b></p>
+				<img class="imgslider" src="starter1.jpg">
+				<img class="imgslider" src="starter2.jpg">
+				<img class="imgslider" src="starter3.jpg">
+				<img class="imgslider" src="starter4.jpg">
+				<img class="imgslider" src="starter5.jpg">
+			</div></a>
+			<a href="Chicken.html"><div id="chicken" class="foodtopics">
+				<p><b>Chicken</b></p>
+				<img class="imgslider2" src="chicken1.jpg">
+				<img class="imgslider2" src="chicken2.jpg">
+				<img class="imgslider2" src="chicken3.jpg">
+				<img class="imgslider2" src="chicken4.jpg">
+				<img class="imgslider2" src="chicken5.jpg">
+			</div></a>
+			<a href="Fish.html"><div id="fish" class="foodtopics">
+				<p><b>Fish</b></p>
+				<img class="imgslider3" src="fish1.jpg">
+				<img class="imgslider3" src="fish2.jpg">
+				<img class="imgslider3" src="fish3.jpg">
+				<img class="imgslider3" src="fish4.jpg">
+				<img class="imgslider3" src="fish5.jpg">
+			</div></a>
+			<a href="Pizza.html"><div id="pizza" class="foodtopics">
+				<p><b>Pizza</b></p>
+				<img class="imgslider4" src="pizza1.jpg">
+				<img class="imgslider4" src="pizza2.jpg">
+				<img class="imgslider4" src="pizza3.jpg">
+				<img class="imgslider4" src="pizza4.jpg">
+				<img class="imgslider4" src="pizza5.jpg">
+			</div></a>
+			<a href="Sandwich.html"><div id="sandwich" class="foodtopics">
+				<p><b>Sandwich</b></p>
+				<img class="imgslider5" src="sandwich1.jpg">
+				<img class="imgslider5" src="sandwich2.jpg">
+				<img class="imgslider5" src="sandwich3.jpg">
+				<img class="imgslider5" src="sandwich4.jpg">
+				<img class="imgslider5" src="sandwich5.jpg">
+			</div></a>
+			<a href="Pasta.html"><div id="pasta" class="foodtopics">
+				<p><b>Pasta</b></p>
+				<img class="imgslider6" src="chicken1.jpg">
+				<img class="imgslider6" src="chicken2.jpg">
+				<img class="imgslider6" src="chicken3.jpg">
+				<img class="imgslider6" src="chicken4.jpg">
+				<img class="imgslider6" src="chicken5.jpg">
+			</div></a>
+			<a href="Soups.html"><div id="soups" class="foodtopics">
+				<p><b>Soups</b></p>
+				<img class="imgslider7" src="soup1.jpg">
+				<img class="imgslider7" src="soup2.jpg">
+				<img class="imgslider7" src="soup3.jpeg">
+				<img class="imgslider7" src="soup4.jpg">
+				<img class="imgslider7" src="soup5.jpg">
+			</div></a>
+			<a href="Snacks.html"><div id="snacks" class="foodtopics">
+				<p><b>Snacks</b></p>
+				<img class="imgslider8" src="snack1.jpg">
+				<img class="imgslider8" src="snack2.png">
+				<img class="imgslider8" src="snack3.jpg">
+				<img class="imgslider8" src="snack4.jpg">
+				<img class="imgslider8" src="snack5.jpg">
+			</div></a>
+			<a href="Desserts.html"><div id="deserts" class="foodtopics">
+				<p><b>Desserts</b></p>
+				<img class="imgslider9" src="dessert1.jpg">
+				<img class="imgslider9" src="dessert2.jpg">
+				<img class="imgslider9" src="dessert3.jpg">
+				<img class="imgslider9" src="dessert4.jpg">
+				<img class="imgslider9" src="dessert5.jpg">
+			</div></a>
+			
+		</div>
+		
+		
+		<script>
+			function search(){
+				alert("we're very sorry for the inconvinence, but our search bar is currently under construction"+" "+":(")
+			}
+			
+				var myIndex=0;
+				Appetizers();
+				chicken();
+				fish();
+				pizza();
+				sandwich();
+				pasta();
+				soups();
+				snacks();
+				deserts();
+				
+				function Appetizers(){
+					var i;
+					var a = document.getElementsByClassName("imgslider");
+					for(i=0;i < a.length;i++){
+						a[i].style.display="none";
+						}
+					myIndex++;
+					if(myIndex > a.length){
+						myIndex=1;
+						}
+					a[myIndex-1].style.display="block";	
+					setTimeout(Appetizers,1000);
+				}
+			
+				function chicken(){
+					var b = document.getElementsByClassName("imgslider2");
+					for(i=0;i < b.length;i++){
+						b[i].style.display="none";
+						}
+					myIndex++;
+					if(myIndex > b.length){
+						myIndex=1;
+						}
+					b[myIndex-1].style.display="block";	
+					setTimeout(chicken,1000);
+				}	
+				
+				function fish(){
+					var c = document.getElementsByClassName("imgslider3");
+					for(i=0;i < c.length;i++){
+						c[i].style.display="none";
+						}
+					myIndex++;
+					if(myIndex > c.length){
+						myIndex=1;
+						}
+					c[myIndex-1].style.display="block";	
+					setTimeout(fish,1000);
+				}	
+				
+				function pizza(){
+					var d = document.getElementsByClassName("imgslider4");
+					for(i=0;i < d.length;i++){
+						d[i].style.display="none";
+						}
+					myIndex++;
+					if(myIndex > d.length){
+						myIndex=1;
+						}
+					d[myIndex-1].style.display="block";	
+					setTimeout(pizza,1000);
+				}		
+				
+				function sandwich(){
+					var e = document.getElementsByClassName("imgslider5");
+					for(i=0;i < e.length;i++){
+						e[i].style.display="none";
+						}
+					myIndex++;
+					if(myIndex > e.length){
+						myIndex=1;
+						}
+					e[myIndex-1].style.display="block";	
+					setTimeout(sandwich,1000);
+				}		
+				
+				function pasta(){
+					var f = document.getElementsByClassName("imgslider6");
+					for(i=0;i < f.length;i++){
+						f[i].style.display="none";
+						}
+					myIndex++;
+					if(myIndex > f.length){
+						myIndex=1;
+						}
+					f[myIndex-1].style.display="block";	
+					setTimeout(pasta,1000);
+				}		
+				
+				function soups(){
+					var g = document.getElementsByClassName("imgslider7");
+					for(i=0;i < g.length;i++){
+						g[i].style.display="none";
+						}
+					myIndex++;
+					if(myIndex > g.length){
+						myIndex=1;
+						}
+					g[myIndex-1].style.display="block";	
+					setTimeout(soups,1000);
+				}		
+				
+				function snacks(){
+					var h = document.getElementsByClassName("imgslider8");
+					for(i=0;i < h.length;i++){
+						h[i].style.display="none";
+						}
+					myIndex++;
+					if(myIndex > h.length){
+						myIndex=1;
+						}
+					h[myIndex-1].style.display="block";	
+					setTimeout(snacks,1000);
+				}		
+				
+				function deserts(){
+					var k = document.getElementsByClassName("imgslider9");
+					for(i=0;i < k.length;i++){
+						k[i].style.display="none";
+						}
+					myIndex++;
+					if(myIndex > k.length){
+						myIndex=1;
+						}
+					k[myIndex-1].style.display="block";	
+					setTimeout(deserts,1000);
+				}				
+				
+							
+				
+					
+		</script>	
+		
+	</body>
+	
+</html>
