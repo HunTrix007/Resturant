@@ -3,7 +3,7 @@
 
 	<head>
 	
-		<title>SACHI's Cooking</title>
+		<title>SACHI's Cooking | Home</title>
 		
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +11,7 @@
 		<style>
 		
 			body{
+background-color:black;
 }
 			.header{
 background-color:#ab073e;			
@@ -18,7 +19,8 @@ background-color:#ab073e;
 			#img1{
 display:inline-block;
 margin-top: 5px;
-margin-left: 5px;			
+margin-left: 5px;
+width: 5vw;			
 }
 			#headleft{
 display:inline-block;			
@@ -34,20 +36,24 @@ margin-right: 5px;
 margin-top: 5px;
 }
 			.header h1{
-margin-bottom: 0px;		
+margin-bottom: 0px;	
+font-size: 4vw;	
 }
 			.header p{
 margin-bottom: 0px;
-margin-top: 0px;		
+margin-top: 0px;	
+font-size: 2vw;			
 }
 			#searchbar{
-margin-top: 35px;	
 padding-top: 3px;	
+width: 20vw;
+border-radius: 10px;
 }
 			#searchbut{
 border-width: 2px;
 margin-right: 5px;
-padding-bottom: 1px;		
+padding-bottom: 1px;
+border-radius: 10px;		
 }
 			.nav{
 background-color:#248c6f;	
@@ -62,6 +68,7 @@ border:4px solid #248c6f;
 border-radius:5px;
 color:black;
 text-decoration:none;
+font-size: 12px
 }
 			.nav a#current{
 background-color:#18c1ee;	
@@ -71,7 +78,20 @@ border:4px solid #18c1ee;
 background-color:lightgrey;		
 border:4px solid lightgrey; 			
 }
-
+			.imgslider {
+display:none;         
+width: auto;
+height: 100%;                                
+}
+			#slidediv{
+background-image:url('background.jpg');
+padding-bottom: 50px;
+padding-top: 50px;	
+height: 60vw;
+}
+			.radiobut{
+}
+	
 		</style>
 		
 	</head>
@@ -80,37 +100,77 @@ border:4px solid lightgrey;
 	
 		<div class="header">
 
-			<img src="logo.png" id="img1">
+			<a href="Home.html"><img src="logo.png" id="img1"></a>
 			
 			<span id="headleft">
 				<h1>SACHI's Cooking</h1>
 				<p>Explore our exquisite recepies that would blow away your taste buds!</p>
 			</span>
 		
-			<span id="headright">
-				<input type="text" id="searchbar" placeholder="Search"> 
-				<button id="searchbut" onclick="search()">&#128269;</button>
-				<br>
-				<a href="#login.html"><button id="login">Login</button></a>	
-			</span>	
+			
 		
 		</div>	
 	
 		<div class="nav">
 		
-			<a href="Home.html" id="current">Home</a>	
-			<a href="Recipes.html">Recipes</a>	
-			<a href="contact.html">Request</a>
+			<a id="current">Home</a>	
+			<a href="Recipeslogin.html">Recipes</a>	
+			<a href="contactlogin.html">Request</a>
+			<span id="headright">
+				<input type="text" id="searchbar" placeholder="Search"> 
+				<button id="searchbut" onclick="search()">&#128269;</button>
+			</span>	
 			
 		</div>
+		
+		<br>
+		
+		<div id="slidediv" align="center">
+
+			<img class="imgslider" src="img1.jpg">
+			<img class="imgslider" src="img8.jpeg">
+			<img class="imgslider" src="img5.jpg">
+			<img class="imgslider" src="img3.jpg">
+			<img class="imgslider" src="img9.jpg">
+			<img class="imgslider" src="drink2.jpg">
+			<img class="imgslider" src="img2.jpg">
+			<img class="imgslider" src="drink5.jpg">
+			<img class="imgslider" src="img7.jpg">
+			<img class="imgslider" src="drink4.jpg">
+			<img class="imgslider" src="drink1.jpg">
+			<img class="imgslider" src="img4.jpg">
+			<img class="imgslider" src="drink3.jpg">
+			<img class="imgslider" src="img6.jpg">
+			<img class="imgslider" src="img16.jpg">
+			<img class="imgslider" src="img10.jpg">
 			
+		</div>
+		
 		<script>
 		
 			function search(){
 				alert("we're very sorry for the inconvinence, but our search bar is currently under construction"+" "+":(")
 			}
 			
-		</script>	
+			
+			var myIndex=0;
+			myFunction();
+			
+			function myFunction(){
+				var i;
+				var x = document.getElementsByClassName("imgslider");
+				for(i=0;i < x.length;i++){
+					x[i].style.display="none";
+					}
+				myIndex++;
+				if(myIndex > x.length){
+					myIndex=1;
+					}
+				x[myIndex-1].style.display="block";	
+				setTimeout(myFunction,2000);
+			}
+			
+		</script>
 		
 	</body>
 	
